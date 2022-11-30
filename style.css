@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('/fonts/Norse-Bold.otf')  format('truetype');
+  }
+
+  @font-face {
+    font-family: 'NotoSans';
+    src: url(/fonts/NotoSans-Regular.ttf)  format('truetype');
+  }
+
+*{
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+:root{
+    --logo-height: clamp(6rem, 10vw, 7rem);
+
+    /* --logo-banner-height: clamp(, 9vw, 8rem); */
+    --logo-banner-height: calc(var(--logo-height) + 1rem);
+}
+
+a{
+    color: white;
+}
+
+.all{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left{
+    font-family: Norse, Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background: url("images/halie-west-night-sky.jpg");
+    display: flex;
+    justify-content: center;
+}
+
+.caption{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    margin: auto;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.logo{
+    font-size: var(--logo-height);
+    height: var(--logo-banner-height);
+    background-color: rgba(100, 100, 100, 0.6);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+.logo>img{
+    height: var(--logo-height);
+}
+
+
+
+.right{
+    font-family: NotoSans, Arial, Helvetica, sans-serif;
+    width: 60%;
+    height: 100%;
+}
