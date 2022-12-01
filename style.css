@@ -197,13 +197,17 @@ form p a{
     color: rgb(106, 0, 0);
 }
 
-.right>p{
+form>p.footer{
     margin-left: 1rem;
     margin-top: 1rem;
     font-style: italic;
     font-size: 0.7rem;
     color: grey;
     max-width: 75ch;
+}
+
+p.caption2{
+    display: none;
 }
 
 @media(max-width: 610px){
@@ -222,20 +226,41 @@ form p a{
         display: none;
     }
 
-    .logo{
-        display: none;
-    }
-
-    .caption{
-        display: none;
-    }
-
     .right{
         width: 100vw;
-        height: 100%
+        height: 100%;
+        background: 50% url(/images/halie-west-night-sky.jpg);
+        color: white;
+    }
+
+    form{
+        background-color: rgba(70, 70, 70, 0.6);
+    }
+
+    form p a{
+        color: white;
+    }
+    
+    form>p.footer{
+        color: white;
+        font-size: 0.75rem;
     }
 
     fieldset{
         grid-template-columns: 1fr;
+    }
+
+    legend{
+        color: black;
+    }
+    p.caption2{
+        display: inline;
+        font-family: Norse, sans-serif;
+        color: white;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    p.caption2 a{
+        color: white;
     }
 }
