@@ -16,7 +16,7 @@
 }
 
 :root{
-    --logo-height: clamp(6rem, 10vw, 7rem);
+    --logo-height: clamp(4rem, 10vw, 7rem);
 
     /* --logo-banner-height: clamp(, 9vw, 8rem); */
     --logo-banner-height: calc(var(--logo-height) + 1rem);
