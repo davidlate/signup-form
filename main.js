@@ -1,6 +1,6 @@
 boxes = document.querySelectorAll('input');
 btn = document.querySelector('button');
-let p1 = '';
+let sumGood = 0;
 
 boxes.forEach(box => box.addEventListener('focusout', (e) =>{
 
@@ -12,11 +12,28 @@ boxes.forEach(box => box.addEventListener('focusout', (e) =>{
 
 
 btn.addEventListener('click', (e) => {
+    let sumGood = 0;
+    let msg = '';
     boxes.forEach( box => {
         let valid = checkGood(box);
         if(!valid) setInvalid(box);
-        else setValid(box);
+        else {
+            setValid(box);
+            sumGood = sumGood+1;
+        }
     })
+
+    if(sumGood == boxes.length){
+        msg = 'Account Created Successfully!'
+        document.querySelector('.addendum').style.color='limegreen';
+    }
+    else {
+        msg = 'Please fix the issues above and try again';
+        document.querySelector('.addendum').style.color='red';
+    }
+
+    document.querySelector('.addendum').textContent=msg;
+
 })
 
 
@@ -27,12 +44,15 @@ function setValid(box){
     box.style.border = '2px #8aff0d solid';
     removeErrorMessage(box);
     box.classList.remove('issue');
+    box.classList.add('valid');
 }
 
 function setInvalid(box){
     box.style.backgroundColor='pink';
     box.style.border = '2px red solid';
     box.classList.add('issue');
+    box.classList.remove('valid');
+
     setErrorMessage(box);
 }
 
@@ -97,7 +117,7 @@ function checkGood(box){
     }
 
     else if(box.id == "password2"){
-        if(box.value == document.querySelector('#password').value) result = true;
+        if(box.value == document.querySelector('#password').value && document.querySelector('#password').classList.contains('valid')) result = true;
         else result = false;
     }
 

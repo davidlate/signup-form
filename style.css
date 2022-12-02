@@ -140,7 +140,7 @@ fieldset{
     margin-right: 1rem;
     position: relative;
     padding-top: 2.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.25rem;
     border: none;
     width: min(90%, 70ch);
 }
@@ -177,6 +177,12 @@ button{
     font-size: .9rem;
 }
 
+.addendum{
+    display: inline;
+    font-style: italic;
+    font-size: .8rem;
+}
+
 p.error{
     display: flex;
     /* align-items: center; */
@@ -194,7 +200,7 @@ form p{
 }
 
 form p a{
-    color: rgb(242, 0, 0);
+    color: rgb(0, 153, 242);
 }
 
 form>p.footer{
