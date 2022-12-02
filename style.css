@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Norse';
-    src: url('/fonts/Norse-Bold.otf')  format('truetype');
+    src: url('fonts/Norse-Bold.otf')  format('truetype');
   }
 
   @font-face {
     font-family: 'NotoSans';
-    src: url(/fonts/NotoSans-Regular.ttf)  format('truetype');
+    src: url('fonts/NotoSans-Regular.ttf')  format('truetype');
   }
 
 *{
@@ -37,7 +37,7 @@
     color: white;
     position: relative;
     width: 40%;
-    background: url("images/halie-west-night-sky.jpg");
+    background: url('images/halie-west-night-sky.jpg');
     display: flex;
     justify-content: center;
 }
@@ -236,7 +236,7 @@ p.caption2{
     .right{
         width: 100vw;
         height: 100%;
-        background: 50% url(/images/halie-west-night-sky.jpg);
+        background: 50% url("images/halie-west-night-sky.jpg");
         color: white;
     }
 
